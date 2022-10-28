@@ -1,0 +1,19 @@
+------------------------BASIC REACT-------------------------
+sudo apt-get update
+sudo apt-get upgrade
+
+
+Clear the npm cache
+When installing some dependencies, you should make sure to clear the NPM cache first.
+
+    npm install n
+    npm install -g n
+This package will take care of handling the Node version in the root.
+
+Install a new version of Node
+    n lts 
+    n latest
+
+Uninstall previously installed versions
+    n prune 
+
