@@ -4,6 +4,7 @@ sudo apt-get upgrade
 
 
 Clear the npm cache
+    npm cache clean
 When installing some dependencies, you should make sure to clear the NPM cache first.
 
     npm install n
@@ -17,3 +18,19 @@ Install a new version of Node
 Uninstall previously installed versions
     n prune 
 
+
+-----npx create-react-app myProyectName
+-create components and layout
+-create css 
+
+-----event handling 
+in todoItem add the onClick event on the check mark and on the cross symbol
+in 'todoSearch' use a 'hook' to handle the state of the 'input'
+
+-----state managment
+now the state that refers to the value will be in App.js 
+and todoSearch will receive that state.
+
+-----filter todos 
+in App.js filter the 'to does' according to what is entered in the search 
+input
