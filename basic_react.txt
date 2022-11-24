@@ -1,4 +1,5 @@
 ------------------------BASIC REACT-------------------------
+
 sudo apt-get update
 sudo apt-get upgrade
 
@@ -19,27 +20,31 @@ Uninstall previously installed versions
     n prune 
 
 
------npx create-react-app myProyectName
+
+
+-----COMPONENTS AND LAYOUT
+npx create-react-app myProyectName
 -create components and layout
 -create css 
 
------event handling 
+-----EVENT HANDLING
 in todoItem add the onClick event on the check mark and on the cross symbol
 in 'todoSearch' use a 'hook' to handle the state of the 'input'
 
------state managment
+-----STATE MANAGMENT - useState
 now the state that refers to the value will be in App.js 
 and todoSearch will receive that state.
 
------filter 'todos' 
+-----FILTER 'to dos' - onChange - 
 in App.js filter the 'to does' according to what is entered in the search 
 input
 
------mark as complete and remove 'todos'
+-----COMPLETE AND REMOVE 'todos' - changing the state - onClick
 In App.js make a function that changes the completed property to true, in the array 
 of 'to dos,' when the check image is clicked.so that the 'todo' 
 is shown as a completed task
 
 Also make a function that removes the 'todos' when clicking on the cross
 
------
+-----DATA PERSISTENCE - Local Storage
+make a space in 'local storage' to save the 'todos' and be able to get them from it.
