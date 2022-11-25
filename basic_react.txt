@@ -48,3 +48,6 @@ Also make a function that removes the 'todos' when clicking on the cross
 
 -----DATA PERSISTENCE - Local Storage
 make a space in 'local storage' to save the 'todos' and be able to get them from it.
+make a 'custom hook' to bundle everything referring to 'localStorage' in 'App.js'
+
+
