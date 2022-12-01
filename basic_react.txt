@@ -3,7 +3,6 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-
 Clear the npm cache
     npm cache clean
 When installing some dependencies, you should make sure to clear the NPM cache first.
@@ -21,8 +20,7 @@ Uninstall previously installed versions
 
 
 
-
------COMPONENTS AND LAYOUT
+-----COMPONENTS, LAYOUT and STYLES
 npx create-react-app myProyectName
 -create components and layout
 -create css 
@@ -49,5 +47,11 @@ Also make a function that removes the 'todos' when clicking on the cross
 -----DATA PERSISTENCE - Local Storage
 make a space in 'local storage' to save the 'todos' and be able to get them from it.
 make a 'custom hook' to bundle everything referring to 'localStorage' in 'App.js'
+
+-----REACT CONTEXT - SHARED STATE - useContext
+in 'App.js' share state via 'React.createContext()' to child components.
+Make use of the useContext 'hook' to consume the 'props' in AppUI, TodoSearch and TodoCounter.
+
+-----
 
 
