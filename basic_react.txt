@@ -52,6 +52,15 @@ make a 'custom hook' to bundle everything referring to 'localStorage' in 'App.js
 in 'App.js' share state via 'React.createContext()' to child components.
 Make use of the useContext 'hook' to consume the 'props' in AppUI, TodoSearch and TodoCounter.
 
------
+-----MODAL - React.createModal()
+create a modal that appears when the add 'todo' button is clicked
+
+
+-----FORM
+create the 'TodoForm' component to return it in the 'modal', 
+in order to register a new 'todo' and save it to 'localStorage'
+
+
+
 
 

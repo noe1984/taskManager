@@ -5,6 +5,8 @@ import { TodoList } from './components/TodoList';
 import { TodoItem } from './components/TodoItem';
 import { CreateTodoButton } from './components/CreateTodoButton';
 import { TodoContext } from './components/TodoContext';
+import { Modal } from './components/Modal'
+import { TodoForm } from './components/TodoForm';
 
 function AppUI() {
     
@@ -13,29 +15,33 @@ function AppUI() {
         error,
         searchedTodos,
         completeTodo,
-        removeTodos
+        removeTodos,
+        openModal,
     } = React.useContext(TodoContext)
     
     return(
         <React.Fragment>
             <TodoCounter/>
             <TodoSearch/>
-
-                    <TodoList>
-                        {loading && <p>Cargando todo's...</p>}
-                        {error && <p>Hubo un error en la aplicacion</p>}
-                        {(!loading && !searchedTodos.length) && <h2>Crea tu primer 'todo'</h2>}
-                        {searchedTodos.map(todo => (
-                            <TodoItem
-                                key={todo.text}
-                                text={todo.text}
-                                completed={todo.completed}
-                                onComplete={ () => completeTodo(todo.text) }
-                                onRemove={ () => removeTodos(todo.text) }
-                            />
-                        ))}
-                    </TodoList>
-
+                <TodoList>
+                    {loading && <p>Cargando todo's...</p>}
+                    {error && <p>Hubo un error en la aplicacion</p>}
+                    {(!loading && !searchedTodos.length) && <h2>Crea tu primer 'todo'</h2>}
+                    {searchedTodos.map(todo => (
+                        <TodoItem
+                            key={todo.text}
+                            text={todo.text}
+                            completed={todo.completed}
+                            onComplete={ () => completeTodo(todo.text) }
+                            onRemove={ () => removeTodos(todo.text) }
+                        />
+                    ))}
+                </TodoList>
+            {openModal && (
+                <Modal>
+                    <TodoForm />
+                </Modal>
+            )}
             <CreateTodoButton />
         </React.Fragment>            
     )

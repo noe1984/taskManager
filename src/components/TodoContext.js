@@ -4,10 +4,13 @@ import { useLocalStorage } from '../hooks/useLocalStorage'
 const TodoContext = React.createContext()
 
 function TodoProvider(props) {
+
+    const [openModal, setOpenModal] = React.useState(false)
+
     const { 
         item:todos,
         saveItem: saveTodos,
-        loading, 
+        loading,  
         error
     } = useLocalStorage('VERSION1', [])
     
@@ -28,7 +31,7 @@ function TodoProvider(props) {
     }
 
 
-    const completeTodo = text => {
+    const completeTodo = text => { 
         const todoIndex = todos.findIndex(todo => todo.text === text)
         const newTodos = [...todos]
         newTodos[todoIndex].completed = true 
@@ -42,6 +45,15 @@ function TodoProvider(props) {
         saveTodos(newTodos)
     }
 
+    const addTodo = text => {
+        const newTodos = [...todos]
+        newTodos.push({
+            completed: false,
+            text
+        })
+        saveTodos(newTodos)
+    }
+
     return (
         <TodoContext.Provider value={{
             loading,
@@ -52,7 +64,10 @@ function TodoProvider(props) {
             setSearchValue,
             searchedTodos,
             completeTodo,
-            removeTodos
+            removeTodos,
+            addTodo,
+            openModal,
+            setOpenModal
         }}>
             {props.children}                                 
         </TodoContext.Provider>
