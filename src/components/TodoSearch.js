@@ -7,12 +7,14 @@ function TodoSearch() {
   const onSearchValueChange = e => setSearchValue(e.target.value)
   
   return (
-    <input 
-      className="TodoSearch" 
-      placeholder="Cebolla" 
-      value={searchValue}
-      onChange={onSearchValueChange}
-    />
+    <div>
+      <input 
+        className="TodoSearch" 
+        placeholder="Busca aqui una tarea....." 
+        value={searchValue}
+        onChange={onSearchValueChange}
+      />
+    </div>
   )
   
 }

@@ -1,7 +1,7 @@
-.Icon-container {
+.Icon-container { 
     cursor: pointer;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     height: 48px;
     width: 48px;
@@ -23,7 +23,7 @@
     transition: fill .15s;
   }
   .Icon-container:hover .Icon-svg--check {
-    fill: #4caf50;
+    fill: greenyellow;
   }
   .Icon-container:hover .Icon-svg--delete {
     fill: red;

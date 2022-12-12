@@ -10,12 +10,17 @@ function CreateTodoButton() {
   } 
 
   return (
-    <button 
-      className="CreateTodoButton" 
-      onClick={toggleOpenModal}
-    >
-      +
+    <div className='CreateTodoButton-container'>
+      <h3>
+        Añade una nueva
+      </h3>
+      <button 
+        className="CreateTodoButton" 
+        onClick={toggleOpenModal}
+      >
+        +
     </button>
+    </div>
   );
 }
 
