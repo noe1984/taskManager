@@ -42,7 +42,7 @@ function AppUI() {
                                 onComplete={ () => completeTodo(todo.text) }
                                 onRemove={ () => removeTodos(todo.text) }
                             />
-                        ))}
+                        ))} 
                     </TodoList>
                 {openModal && (
                     <Modal>

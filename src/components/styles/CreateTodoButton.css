@@ -1,5 +1,6 @@
 .CreateTodoButton-container {
   display: flex;
+  align-items: center;
   margin: 16px 0 16px 0;
 }
 .CreateTodoButton {
@@ -8,16 +9,16 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 50px;
+  font-size: 28px;
   font-weight: bold;
   color: #FAFAFA;
   justify-content: center;
   align-items: center;
-  height: 64px;
-  width: 64px;
+  height: 44px;
+  width: 44px;
   transform: rotate(0);
   transition: .3s ease;
-  margin-left: 32px;
+  margin-left: 16px;
 }
 
 .CreateTodoButton:hover {

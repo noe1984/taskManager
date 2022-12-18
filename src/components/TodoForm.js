@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react' 
 import './styles/TodoForm.css'
-import { TodoContext } from './TodoContext'
+import { TodoContext } from './TodoContext' 
 
 function TodoForm() {
     const {addTodo, setOpenModal} = React.useContext(TodoContext)
@@ -22,7 +22,7 @@ function TodoForm() {
 
     return (
         <form onSubmit={onSubmit} className='form'>
-            <label>Escribe tu nuevo TODO</label>
+            <label>Escribe tu nueva tarea</label>
 
             <textarea
                 placeholder="Escribe aqui una actividad a realizar"
@@ -52,4 +52,4 @@ function TodoForm() {
     )
 }
 
-export {TodoForm}
+export {TodoForm} 

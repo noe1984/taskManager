@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react' 
+
 import './styles/TodoIcons.css'
 import { RiDeleteBinFill as Delete } from 'react-icons/ri';
 import { BsCheckCircle as Check } from 'react-icons/bs';
+import { FaEdit as Edit } from 'react-icons/fa';
 
 const iconTypes = { 
     "check": color => (
@@ -9,6 +11,9 @@ const iconTypes = {
     ),
     "delete": color => (
         <Delete className="Icon-svg Icon-svg--delete" fill={color}/>
+    ),
+    "edit": color => (
+        <Edit className="Icon-svg Icon-svg--edit" fill={color} />
     )
 }
 
@@ -26,7 +31,7 @@ function CompleteIcon({completed, onComplete}) {
     return (
         <TodoIcon 
             type={'check'}
-            color={completed? 'gray' : '#4CAF50'} 
+            color={completed? 'gray' : '#CCFF33'} 
             onClick={onComplete} 
         />
     )

@@ -12,7 +12,7 @@ function CreateTodoButton() {
   return (
     <div className='CreateTodoButton-container'>
       <h3>
-        Añade una nueva
+        Añade una nueva tarea
       </h3>
       <button 
         className="CreateTodoButton" 

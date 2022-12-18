@@ -1,9 +1,9 @@
-import React from 'react'; 
-import './styles/TodoItem.css';
-import {CompleteIcon, RemoveIcon} from './TodoIcons'
+import React from 'react';
+import './styles/TodoItem.css';  
+import {CompleteIcon,RemoveIcon} from './TodoIcons'
 
 function TodoItem(props) {
-  
+   
   return (
     <li className="TodoItem">
       <CompleteIcon completed={props.completed} onComplete={props.onComplete} />
@@ -16,4 +16,4 @@ function TodoItem(props) {
   );
 }
 
-export { TodoItem };
+export { TodoItem }; 

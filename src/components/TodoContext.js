@@ -28,22 +28,41 @@ function TodoProvider(props) {
             let todoText = todo.text.toLowerCase()
             return todoText.includes(searchText)
         })
-    }
+    } 
 
 
     const completeTodo = text => { 
         const todoIndex = todos.findIndex(todo => todo.text === text)
         const newTodos = [...todos]
-        newTodos[todoIndex].completed = true 
+        newTodos[todoIndex].completed = !newTodos[todoIndex].completed
         saveTodos(newTodos)
     }
+
+    // const completeTodo = (text) => {
+    //     saveTodos(
+    //       todos.map(todo => {
+    //         if (todo.text === text) {
+    //           return {
+    //             ...todo,
+    //             completed: !todo.completed,
+    //           };
+    //         }
+    //         return todo;
+    //       })
+    //     );
+    // };
 
     const removeTodos = text => {
         const todoIndex = todos.findIndex(todo => todo.text === text)
         const newTodos = [...todos]
-        newTodos.splice(todoIndex, 1)
+        newTodos.splice(todoIndex, 1) 
         saveTodos(newTodos)
     }
+
+    // function removeTodos(text){
+    //     const newTodos = todos.filter(todo=>todo.text !== text)
+    //     saveTodos(newTodos)
+    // }
 
     const addTodo = text => {
         const newTodos = [...todos]
@@ -51,8 +70,9 @@ function TodoProvider(props) {
             completed: false,
             text
         })
-        saveTodos(newTodos)
+        saveTodos(newTodos)  
     }
+
 
     return (
         <TodoContext.Provider value={{
@@ -67,9 +87,9 @@ function TodoProvider(props) {
             removeTodos,
             addTodo,
             openModal,
-            setOpenModal
+            setOpenModal,
         }}>
-            {props.children}                                 
+            {props.children}                                  
         </TodoContext.Provider>
     )
 }
