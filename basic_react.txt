@@ -65,4 +65,9 @@ create a function to handle the delete and complete icons that will be used in '
 
 
 
+-----------------RENDERING AND COMPOSITION PATTERNS-------------------------
+-Move the information inside AppUI to App and remove AppUI
+-Go to TodoContext and tranform it into a custom hook named 'useTodos' 
+
+
 
