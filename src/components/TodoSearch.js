@@ -1,16 +1,17 @@
 import React from 'react';
 import './styles/TodoSearch.css';
 
-function TodoSearch({searchValue, setSearchValue}) {
+function TodoSearch({searchValue, setSearchValue, loading}) {
   const onSearchValueChange = e => setSearchValue(e.target.value)
   
   return (
     <div>
       <input 
-        className="TodoSearch" 
+        className={`TodoSearch ${loading && "TodoSearch--loading"}`}
         placeholder="Busca aqui una tarea....." 
         value={searchValue}
-        onChange={onSearchValueChange}
+        onChange={onSearchValueChange} 
+        disabled={loading} 
       />
     </div>
   )

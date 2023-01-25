@@ -66,8 +66,28 @@ create a function to handle the delete and complete icons that will be used in '
 
 
 -----------------RENDERING AND COMPOSITION PATTERNS-------------------------
+
 -Move the information inside AppUI to App and remove AppUI
 -Go to TodoContext and tranform it into a custom hook named 'useTodos' 
+- this way it will not be necessary use React.CreateContext
+
+----RENDER PROPS 
+-in the 'TodoList' component in App.js render the TodosLoading, TodosError, 
+EmptyTodos and TodoItem components as render props.
+
+----RENDER FUNCTIONS
+-create a component to display when no search results exist.
+-render the 'todoItem' component as a 'render prop' or as a 'render function' 
+and allow the 'todo list' component to receive it by both methods.
+
+----React.Children and React.CloneElement
+-display loading states in counter and search input
+
+-----HIGH ORDER COMPONENTS
+-notify when there are changes using localStorage on the main page to another 
+that is open so that the user has the option to refresh the page and synchronize
+the information.
+
 
 
 
