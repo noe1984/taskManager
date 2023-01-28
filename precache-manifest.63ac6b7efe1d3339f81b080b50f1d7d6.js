@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "66410319da298a16b565",
-    "url": "/taskManager/static/css/main.8a666105.chunk.css"
+    "revision": "a7fccae8f0404f84f6ea",
+    "url": "/taskManager/static/css/main.36ced3d2.chunk.css"
   },
   {
-    "revision": "66410319da298a16b565",
-    "url": "/taskManager/static/js/main.66410319.chunk.js"
+    "revision": "a7fccae8f0404f84f6ea",
+    "url": "/taskManager/static/js/main.a7fccae8.chunk.js"
   },
   {
     "revision": "ffd6d87c7f4543eb2397",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/taskManager/static/js/runtime~main.3a251e45.js"
   },
   {
-    "revision": "d11ccb1d6a8e43edfd5dcb0e559cf43f",
+    "revision": "bee4afb4945419502f133538bda93553",
     "url": "/taskManager/index.html"
   }
 ];
