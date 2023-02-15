@@ -88,6 +88,9 @@ and allow the 'todo list' component to receive it by both methods.
 that is open so that the user has the option to refresh the page and synchronize
 the information.
 
+-----MIGRATION FROM 'useState' to 'useReducer'
+
+
 
 
 

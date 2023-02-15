@@ -1,0 +1,9 @@
+.AppUI {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.AppUI-container {
+    width: 600px;
+}

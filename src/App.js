@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 import { useTodos } from './hooks/useTodos';
 import { Modal } from './components/Modal'
 import { TodosLoading } from './components/TodosLoading';
