@@ -1,7 +1,11 @@
 import React from 'react' 
 import './styles/TodoForm.css'
+import { useTodos } from '../hooks/useTodos'
 
-function TodoForm({addTodo, setOpenModal}) {
+function TodoForm() {
+    const { stateModifiers } = useTodos()
+    // const { stateModifiers } = useTodos()
+    const { addTodo } = stateModifiers
     const [todoValue, setTodoValue] = React.useState('')
 
     function onChange(e) {
@@ -11,12 +15,11 @@ function TodoForm({addTodo, setOpenModal}) {
     function onSubmit(e) {
         e.preventDefault()
         addTodo(todoValue)
-        setOpenModal(false)
     }
 
-    function onCancel() {
-        setOpenModal(false)
-    }
+    // function onCancel() {
+    //     return null
+    // }
 
     return (
         <form onSubmit={onSubmit} className='form'>
@@ -33,7 +36,7 @@ function TodoForm({addTodo, setOpenModal}) {
                 <button
                     type="button"
                     className="TodoForm-button TodoForm-button--cancel"
-                    onClick={onCancel}
+                    // onClick={onCancel}
                     >
                     Cancelar
                 </button>

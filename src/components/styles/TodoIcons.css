@@ -32,7 +32,10 @@
     fill: gray;
   }
   .Icon-container:hover .Icon-svg--delete {
-    fill: red;
+    fill: #E67E22;
+  }
+  .Icon-container:hover .Icon-svg--edit {
+    fill: #D7DBDD;
   }
 
 

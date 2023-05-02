@@ -1,11 +1,9 @@
 import React from 'react';
 import './styles/CreateTodoButton.css'; 
+import { useNavigate } from 'react-router';
 
-function CreateTodoButton({setOpenModal}) { 
-  
-  const toggleOpenModal = () => {
-    setOpenModal(prevState => !prevState)
-  } 
+function CreateTodoButton() { 
+  const navigate = useNavigate()
 
   return (
     <div className='CreateTodoButton-container'>
@@ -14,7 +12,7 @@ function CreateTodoButton({setOpenModal}) {
       </h3>
       <button 
         className="CreateTodoButton" 
-        onClick={toggleOpenModal}
+        onClick={() => navigate('/new')}
       >
         +
     </button>

@@ -3,15 +3,13 @@ import { useLocalStorage } from './useLocalStorage'
 
 function useTodos() {
 
-    const [openModal, setOpenModal] = React.useState(false)
-
     const { 
         item:todos,
         saveItem: saveTodos,
         loading,  
         error,
         synchronizeItem: synchronizeTodos
-    } = useLocalStorage('VERSION1', [])
+    } = useLocalStorage('VERSION2', [])
     
     const [searchValue, setSearchValue] = React.useState('')
     const completedTodos = todos.filter(todo => todo.completed === true).length
@@ -63,6 +61,10 @@ function useTodos() {
     //     saveTodos(newTodos)
     // }
 
+    const getId = () => {
+        
+    }
+
     const addTodo = text => {
         const newTodos = [...todos]
         newTodos.push({
@@ -72,22 +74,25 @@ function useTodos() {
         saveTodos(newTodos) 
     }
 
-
-    return {
+    const states = {
         loading,
         error,
-        completedTodos,
         totalTodos,
+        completedTodos,
         searchValue,
-        setSearchValue,
         searchedTodos,
+        
+    }
+
+    const stateModifiers = {
+        synchronizeTodos,
+        setSearchValue,
         completeTodo,
         removeTodos,
         addTodo,
-        openModal,
-        setOpenModal,
-        synchronizeTodos,
     }
+
+    return { states, stateModifiers }
 }
 
 export { useTodos }

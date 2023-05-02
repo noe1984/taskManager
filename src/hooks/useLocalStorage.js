@@ -2,7 +2,7 @@ import React from 'react'
 
 const initialState = ({initialValue}) => ({
   item: initialValue,
-  loading: false,
+  loading: true,
   error: false,
   synchronizedItem: true
 })

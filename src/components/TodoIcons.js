@@ -41,11 +41,21 @@ function RemoveIcon({onRemove}) {
     return (
         <TodoIcon 
             type={'delete'}
-            color={'#EC407A'}
+            color={'#BA4A00'}
             onClick={onRemove} 
         />
     )
 }
 
-export {CompleteIcon, RemoveIcon}
+function EditIcon({onEdit}) {
+    return (
+        <TodoIcon 
+            type={'edit'}
+            color={'#808B96'}
+            onClick={onEdit} 
+        />
+    )
+}
+
+export {CompleteIcon, RemoveIcon, EditIcon}
 

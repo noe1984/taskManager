@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/TodoItem.css';  
-import {CompleteIcon,RemoveIcon} from './TodoIcons'
+import {CompleteIcon,EditIcon,RemoveIcon} from './TodoIcons'
 
 function TodoItem(props) {
    
@@ -11,6 +11,7 @@ function TodoItem(props) {
       <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
         {props.text}
       </p>
+      <EditIcon onRemove={props.onEdit} />
       <RemoveIcon onRemove={props.onRemove} />
     </li>
   );
