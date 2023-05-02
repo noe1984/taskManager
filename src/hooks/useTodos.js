@@ -62,14 +62,22 @@ function useTodos() {
     // }
 
     const getId = () => {
-        
+        const idList = todos.map(todo => todo.id)
+        console.log(idList)
+        if(!idList.length) {
+            return 1
+        }
+        const maxId = Math.max(...idList)
+        return maxId + 1
     }
 
     const addTodo = text => {
+        const newId = getId()
         const newTodos = [...todos]
         newTodos.push({
             completed: false,
-            text
+            text,
+            id: newId
         })
         saveTodos(newTodos) 
     }

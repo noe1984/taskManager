@@ -1,10 +1,12 @@
 import React from 'react' 
 import './styles/TodoForm.css'
 import { useTodos } from '../hooks/useTodos'
+import { useNavigate } from 'react-router'
 
 function TodoForm() {
     const { stateModifiers } = useTodos()
-    // const { stateModifiers } = useTodos()
+    const navigate = useNavigate()
+    
     const { addTodo } = stateModifiers
     const [todoValue, setTodoValue] = React.useState('')
 
@@ -15,11 +17,12 @@ function TodoForm() {
     function onSubmit(e) {
         e.preventDefault()
         addTodo(todoValue)
+        navigate('/')
     }
 
-    // function onCancel() {
-    //     return null
-    // }
+    function onCancel() {
+        navigate(-1)
+    }
 
     return (
         <form onSubmit={onSubmit} className='form'>
@@ -36,7 +39,7 @@ function TodoForm() {
                 <button
                     type="button"
                     className="TodoForm-button TodoForm-button--cancel"
-                    // onClick={onCancel}
+                    onClick={onCancel}
                     >
                     Cancelar
                 </button>
