@@ -2,6 +2,7 @@ import React from 'react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 import { HomePage } from './HomePage';
 import { NewTodoPage } from './NewTodoPage';
+import { EditTodoPage } from './EditTodoPage';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/new' element={<NewTodoPage />} />
+        <Route path='/edit/:id' element={<EditTodoPage />} />
       </Routes>
     </HashRouter>
   )

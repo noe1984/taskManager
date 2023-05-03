@@ -11,7 +11,7 @@ function TodoItem(props) {
       <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
         {props.text}
       </p>
-      <EditIcon onRemove={props.onEdit} />
+      <EditIcon onEdit={props.onEdit} />
       <RemoveIcon onRemove={props.onRemove} />
     </li>
   );

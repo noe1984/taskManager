@@ -3,7 +3,7 @@ import './styles/TodoForm.css'
 import { useTodos } from '../hooks/useTodos'
 import { useNavigate } from 'react-router'
 
-function TodoForm() {
+function TodoForm({formTitle, submitText, }) {
     const { stateModifiers } = useTodos()
     const navigate = useNavigate()
     
@@ -26,7 +26,7 @@ function TodoForm() {
 
     return (
         <form onSubmit={onSubmit} className='form'>
-            <label>Escribe tu nueva tarea</label>
+            <label>{formTitle}</label>
 
             <textarea
                 placeholder="Escribe aqui una actividad a realizar"
@@ -48,7 +48,7 @@ function TodoForm() {
                     type="submit"
                     className="TodoForm-button TodoForm-button--add"
                 >
-                    Añadir
+                    {submitText}
                 </button>
 
             </div>

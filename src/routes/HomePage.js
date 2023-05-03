@@ -11,9 +11,11 @@ import { CreateTodoButton } from '../components/CreateTodoButton';
 import { TodoHeader } from '../components/TodoHeader';
 import { ChangeAlert } from '../components/ChangeAlert';
 import './styles/HomePage.css'
+import { useNavigate } from 'react-router';
 
 function HomePage() {
   const { states, stateModifiers } = useTodos()
+  const navigate = useNavigate()
   const {
     loading,
     error,
@@ -56,12 +58,12 @@ const {
           onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p> }
           onRender={todo => (
           <TodoItem
-              key={todo.text}
+              key={todo.id}
               text={todo.text}
               completed={todo.completed}
-              onComplete={ () => completeTodo(todo.text) }
-              onRemove={ () => removeTodos(todo.text) }
-              onEdit={ () => console.log('go to edit') }
+              onComplete={ () => completeTodo(todo.id) }
+              onRemove={ () => removeTodos(todo.id) }
+              onEdit={ () => navigate('/edit/' + todo.id) }
           />
           )}
         >

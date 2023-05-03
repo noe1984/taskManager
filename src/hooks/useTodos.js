@@ -28,8 +28,8 @@ function useTodos() {
     } 
 
 
-    const completeTodo = text => { 
-        const todoIndex = todos.findIndex(todo => todo.text === text)
+    const completeTodo = id => { 
+        const todoIndex = todos.findIndex(todo => todo.id === id)
         const newTodos = [...todos]
         newTodos[todoIndex].completed = !newTodos[todoIndex].completed
         saveTodos(newTodos)
@@ -49,8 +49,8 @@ function useTodos() {
     //     );
     // };
 
-    const removeTodos = text => {
-        const todoIndex = todos.findIndex(todo => todo.text === text)
+    const removeTodos = id => {
+        const todoIndex = todos.findIndex(todo => todo.id === id)
         const newTodos = [...todos]
         newTodos.splice(todoIndex, 1) 
         saveTodos(newTodos)
@@ -63,6 +63,7 @@ function useTodos() {
 
     const getId = () => {
         const idList = todos.map(todo => todo.id)
+        console.log(idList)
         console.log(idList)
         if(!idList.length) {
             return 1

@@ -1,9 +1,9 @@
 import React from 'react';
 import { TodoForm } from '../components/TodoForm';
 
-function NewTodoPage(params) {
+function NewTodoPage() {
     return (
-        <TodoForm/>
+        <TodoForm formTitle={'Crea un nuevo todo'} submitText={'crear'}/>
     )
 }
 
