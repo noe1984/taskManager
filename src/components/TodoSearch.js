@@ -12,7 +12,7 @@ function TodoSearch({searchValue, setSearchValue, loading}) {
         value={searchValue}
         onChange={onSearchValueChange} 
         disabled={loading} 
-      />
+      /> 
     </div>
   )
   

@@ -10,8 +10,8 @@ import { TodoItem } from '../components/TodoItem';
 import { CreateTodoButton } from '../components/CreateTodoButton';
 import { TodoHeader } from '../components/TodoHeader';
 import { ChangeAlert } from '../components/ChangeAlert';
-import './styles/HomePage.css'
 import { useNavigate } from 'react-router';
+import './styles/HomePage.css'
 
 function HomePage() {
   const { states, stateModifiers } = useTodos()
@@ -30,7 +30,6 @@ const {
     setSearchValue,
     completeTodo,
     removeTodos,
-    addTodo,
 } = stateModifiers
 
   return ( 
@@ -43,7 +42,7 @@ const {
           <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
         </TodoHeader>
 
-        <CreateTodoButton/>
+        <CreateTodoButton loading={loading}/>
         <ChangeAlert synchronizeTodos={synchronizeTodos}  />
         <TodoList 
           searchedTodos={searchedTodos}
@@ -63,7 +62,9 @@ const {
               completed={todo.completed}
               onComplete={ () => completeTodo(todo.id) }
               onRemove={ () => removeTodos(todo.id) }
-              onEdit={ () => navigate('/edit/' + todo.id) }
+              onEdit={ () => 
+                navigate('/edit/' + todo.id, {state: {todo}}) 
+              }
           />
           )}
         >

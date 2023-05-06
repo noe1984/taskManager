@@ -28,6 +28,39 @@ function useTodos() {
     } 
 
 
+    
+    // const completeTodo = (text) => {
+        //     saveTodos(
+            //       todos.map(todo => {
+                //         if (todo.text === text) {
+    //           return {
+        //             ...todo,
+        //             completed: !todo.completed,
+        //           };
+    //         }
+    //         return todo;
+    //       })
+    //     );
+    // };
+    const getId = () => {
+        const idList = todos.map(todo => todo.id)
+        if(!idList.length) {
+            return 1
+        }
+        const maxId = Math.max(...idList)
+        return maxId + 1
+    }
+    const addTodo = text => {
+        const newId = getId()
+        const newTodos = [...todos]
+        newTodos.push({
+            completed: false,
+            text,
+            id: newId
+        })
+        saveTodos(newTodos) 
+    }
+
     const completeTodo = id => { 
         const todoIndex = todos.findIndex(todo => todo.id === id)
         const newTodos = [...todos]
@@ -35,19 +68,17 @@ function useTodos() {
         saveTodos(newTodos)
     }
 
-    // const completeTodo = (text) => {
-    //     saveTodos(
-    //       todos.map(todo => {
-    //         if (todo.text === text) {
-    //           return {
-    //             ...todo,
-    //             completed: !todo.completed,
-    //           };
-    //         }
-    //         return todo;
-    //       })
-    //     );
-    // };
+    const editTodo = (id, newText) => { 
+        const todoIndex = todos.findIndex(todo => todo.id === id)
+        const newTodos = [...todos]
+        newTodos[todoIndex].text = newText
+        saveTodos(newTodos)
+    }
+
+    const getTodo = id => {
+        const todoIndex = todos.findIndex(todo => todo.id === id)
+        return todos[todoIndex]
+    }
 
     const removeTodos = id => {
         const todoIndex = todos.findIndex(todo => todo.id === id)
@@ -61,27 +92,7 @@ function useTodos() {
     //     saveTodos(newTodos)
     // }
 
-    const getId = () => {
-        const idList = todos.map(todo => todo.id)
-        console.log(idList)
-        console.log(idList)
-        if(!idList.length) {
-            return 1
-        }
-        const maxId = Math.max(...idList)
-        return maxId + 1
-    }
 
-    const addTodo = text => {
-        const newId = getId()
-        const newTodos = [...todos]
-        newTodos.push({
-            completed: false,
-            text,
-            id: newId
-        })
-        saveTodos(newTodos) 
-    }
 
     const states = {
         loading,
@@ -90,7 +101,7 @@ function useTodos() {
         completedTodos,
         searchValue,
         searchedTodos,
-        
+        getTodo,
     }
 
     const stateModifiers = {
@@ -99,6 +110,7 @@ function useTodos() {
         completeTodo,
         removeTodos,
         addTodo,
+        editTodo
     }
 
     return { states, stateModifiers }

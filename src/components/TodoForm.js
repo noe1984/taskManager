@@ -1,14 +1,11 @@
 import React from 'react' 
 import './styles/TodoForm.css'
 import { useTodos } from '../hooks/useTodos'
-import { useNavigate } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
 
-function TodoForm({formTitle, submitText, }) {
-    const { stateModifiers } = useTodos()
+function TodoForm(props) {
+    const [todoValue, setTodoValue] = React.useState('' || props.textToEdit)
     const navigate = useNavigate()
-    
-    const { addTodo } = stateModifiers
-    const [todoValue, setTodoValue] = React.useState('')
 
     function onChange(e) {
         setTodoValue(e.target.value)
@@ -16,7 +13,7 @@ function TodoForm({formTitle, submitText, }) {
 
     function onSubmit(e) {
         e.preventDefault()
-        addTodo(todoValue)
+        props.submitEvent(todoValue)
         navigate('/')
     }
 
@@ -26,7 +23,7 @@ function TodoForm({formTitle, submitText, }) {
 
     return (
         <form onSubmit={onSubmit} className='form'>
-            <label>{formTitle}</label>
+            <label>{props.formTitle}</label>
 
             <textarea
                 placeholder="Escribe aqui una actividad a realizar"
@@ -48,7 +45,7 @@ function TodoForm({formTitle, submitText, }) {
                     type="submit"
                     className="TodoForm-button TodoForm-button--add"
                 >
-                    {submitText}
+                    {props.submitText}
                 </button>
 
             </div>
