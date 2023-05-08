@@ -41,7 +41,7 @@ function RemoveIcon({onRemove}) {
     return (
         <TodoIcon 
             type={'delete'}
-            color={'#BA4A00'}
+            color={'#A93226'}
             onClick={onRemove} 
         />
     )
@@ -51,7 +51,7 @@ function EditIcon({onEdit}) {
     return (
         <TodoIcon 
             type={'edit'}
-            color={'#808B96'}
+            color={'#515A5A'}
             onClick={onEdit} 
         />
     )

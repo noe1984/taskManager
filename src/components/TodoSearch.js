@@ -11,7 +11,7 @@ function TodoSearch({searchValue, setSearchValue, loading}) {
         placeholder="Busca aqui una tarea....." 
         value={searchValue}
         onChange={onSearchValueChange} 
-        disabled={loading} 
+        disabled={loading}  
       /> 
     </div>
   )

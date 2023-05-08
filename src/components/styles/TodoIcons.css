@@ -26,16 +26,16 @@
   .Icon-svg {
     width: 24px;
     height: 24px;
-    transition: fill .15s;
+    transition: fill .15s; 
   }
   .Icon-container:hover .Icon-svg--check {
     fill: gray;
   }
   .Icon-container:hover .Icon-svg--delete {
-    fill: #E67E22;
+    fill: #CD6155;
   }
   .Icon-container:hover .Icon-svg--edit {
-    fill: #D7DBDD;
+    fill: #707B7C;
   }
 
 
