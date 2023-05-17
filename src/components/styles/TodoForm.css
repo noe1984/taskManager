@@ -61,7 +61,7 @@
     font-size: 20px;
     color: #202329;
     font-weight: 400; 
-    width: 128px;
+    width: 46%;
     height: 48px;
     border: none;
     font-family: 'Montserrat';
@@ -74,7 +74,6 @@
   
   .TodoForm-button--add {
     background: #5499C7;
-    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5);
     border-radius: 6px;
   }
 
@@ -83,10 +82,10 @@
   }
   
   .TodoForm-button--cancel {
-    background: #c15638;  /* fallback for old browsers */
+    background: transparent;  /* fallback for old browsers */
     border-radius: 6px;
   }
 
   .TodoForm-button--cancel:hover {
-    background: #d06e53;
+    background: #CD6155;
   }

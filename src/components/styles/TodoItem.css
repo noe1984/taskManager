@@ -2,21 +2,39 @@
   background-color: #5499C7;
   position: relative;   
   display: flex;
+  margin-top: 12px;
   justify-content: center; 
+  justify-items: center;
   align-items: center;
-  margin-top: 24px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
   border-radius: 16px;
-  height: 54px;
 }
 
-.TodoItem-p {
-  margin: 24px 0 24px 24px;
-  width: calc(100% - 100px); 
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
+.TodoItem-complete_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 34px; 
 }
+
+.TodoItem-text {
+  width: calc(100% - 50px); 
+  font-size: 18px;
+  font-weight: bold;
+  font-size: 12px;
+  padding-right: 32px;
+  padding-left: 8px;
+}
+.TodoItem-p {
+  margin-right: 32px;
+  width: calc(100% - 50px); 
+}
+
 .TodoItem-p--complete {
   text-decoration: line-through;
+}
+
+.TodoItem-remove_edit {
+  display: flex;
+  align-items: center;
 }

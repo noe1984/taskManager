@@ -1,15 +1,23 @@
 import React from 'react';
 import './styles/TodoSearch.css';
+import {useSearchParams } from 'react-router-dom';
 
 function TodoSearch({searchValue, setSearchValue, loading}) {
-  const onSearchValueChange = e => setSearchValue(e.target.value)
+  const [searchParams, setSearchParams] = useSearchParams()
+  const searchParamsValue = searchParams.get('search')
+  console.log(searchValue) 
+
+  const onSearchValueChange = (e) => {
+    setSearchValue(e.target.value)
+    setSearchParams({search: e.target.value})
+  }
   
   return (
     <div>
       <input 
         className={`TodoSearch ${loading && "TodoSearch--loading"}`}
         placeholder="Busca aqui una tarea....." 
-        value={searchValue}
+        value={searchParamsValue ?? searchValue}
         onChange={onSearchValueChange} 
         disabled={loading}  
       /> 
@@ -17,5 +25,8 @@ function TodoSearch({searchValue, setSearchValue, loading}) {
   )
   
 }
+
+
+
 
 export { TodoSearch }; 

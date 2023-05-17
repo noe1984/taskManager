@@ -5,5 +5,11 @@
 }
 
 .AppUI-container {
-    width: 700px;
+    width: 50%;
+}
+
+@media screen and (min-width: 300px) and (max-width: 913px) {
+    .AppUI-container {
+        width: 80%;
+    } 
 }

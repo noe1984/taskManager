@@ -19,7 +19,7 @@ function HomePage() {
   const {
     loading,
     error,
-    totalTodos,
+    totalTodos, 
     completedTodos,
     searchValue,
     searchedTodos, 
@@ -28,7 +28,7 @@ function HomePage() {
 const {
     synchronizeTodos,
     setSearchValue,
-    completeTodo,
+    completeTodo, 
     removeTodos,
 } = stateModifiers
 
