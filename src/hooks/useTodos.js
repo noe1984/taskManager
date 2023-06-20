@@ -69,13 +69,14 @@ function useTodos() {
     }
 
     const editTodo = (id, newText) => { 
+        
         const todoIndex = todos.findIndex(todo => todo.id === id)
         const newTodos = [...todos]
         newTodos[todoIndex].text = newText
         saveTodos(newTodos)
     }
 
-    const getTodo = id => {
+    const getTodo = (id) => {
         const todoIndex = todos.findIndex(todo => todo.id === id)
         return todos[todoIndex]
     }

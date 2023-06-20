@@ -12,6 +12,7 @@ import { TodoHeader } from '../components/TodoHeader';
 import { ChangeAlert } from '../components/ChangeAlert';
 import { useNavigate } from 'react-router';
 import './styles/HomePage.css'
+import logo from '../assets/logo.png'
 
 function HomePage() {
   const { states, stateModifiers } = useTodos()
@@ -32,10 +33,13 @@ const {
     removeTodos,
 } = stateModifiers
 
-  return ( 
+  return (  
     <div className='AppUI'>
       <div className='AppUI-container'>
-        <h1>My Task Manager</h1>
+        <div className='AppUI-container--title'>
+          <h1>My Task Manager</h1>
+          <img src={logo} />
+        </div>
 
         <TodoHeader loading={loading}>
           <TodoCounter completedTodos={completedTodos} totalTodos={totalTodos}/>
@@ -57,7 +61,7 @@ const {
           onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p> }
           onRender={todo => (
           <TodoItem
-              key={todo.id}
+              key={todo.id} 
               text={todo.text}
               completed={todo.completed}
               onComplete={ () => completeTodo(todo.id) }

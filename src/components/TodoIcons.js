@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react'  
 
 import './styles/TodoIcons.css'
 import { RiDeleteBinFill as Delete } from 'react-icons/ri';
@@ -31,9 +31,9 @@ function CompleteIcon({completed, onComplete}) {
     return (
         <TodoIcon 
             type={'check'}
-            color={completed? 'gray' : '#CCFF33'} 
+            color={completed? '#212F3C' : '#CCFF33'} 
             onClick={onComplete} 
-        />
+        /> 
     )
 }
 
@@ -42,7 +42,7 @@ function RemoveIcon({onRemove}) {
         <TodoIcon 
             type={'delete'}
             color={'#A93226'}
-            onClick={onRemove} 
+            onClick={onRemove}  
         />
     )
 }

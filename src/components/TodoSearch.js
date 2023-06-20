@@ -5,7 +5,7 @@ import {useSearchParams } from 'react-router-dom';
 function TodoSearch({searchValue, setSearchValue, loading}) {
   const [searchParams, setSearchParams] = useSearchParams()
   const searchParamsValue = searchParams.get('search')
-  console.log(searchValue) 
+  
 
   const onSearchValueChange = (e) => {
     setSearchValue(e.target.value)

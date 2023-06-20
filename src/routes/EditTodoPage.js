@@ -2,7 +2,7 @@ import React from 'react'
 import { TodoForm } from '../components/TodoForm'
 import { useLocation, useParams } from 'react-router'
 import { useTodos } from '../hooks/useTodos';
-import { useSearchParams } from 'react-router-dom';
+import editTask from '../assets/editTask.jpg'
 
 
 function EditTodoPage() {
@@ -30,6 +30,7 @@ function EditTodoPage() {
         <TodoForm 
             formTitle={'Edita tu todo'} 
             submitText={'editar'} 
+            formImage={editTask}
             textToEdit={textToEdit} 
             submitEvent={(newText) => editTodo(id, newText)}
         />

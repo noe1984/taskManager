@@ -9,33 +9,31 @@
   }
   .Icon-container--check {
     position: absolute;
-    left: 2px;
+    margin-left: 8px;
   }
   .Icon-container--delete {
     position: absolute; 
-    /* top: -24px; */
-    right: -2px;
+    right: 2px;
   } 
 
   .Icon-container--edit {
     position: absolute;
-    /* top: -24px; */
-    right: 22px;
+    right: 36px;
   }
   
-  .Icon-svg {
+  .Icon-svg { 
     width: 18px;
     height: 18px;
     transition: fill .15s; 
   }
   .Icon-container:hover .Icon-svg--check {
-    fill: gray;
+    fill: rgb(173, 160, 160);
   }
   .Icon-container:hover .Icon-svg--delete {
     fill: #CD6155;
   }
   .Icon-container:hover .Icon-svg--edit {
-    fill: #707B7C;
+    fill: #707B7C; 
   }
 
 

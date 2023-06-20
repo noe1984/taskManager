@@ -5,11 +5,11 @@ import {CompleteIcon,EditIcon,RemoveIcon} from './TodoIcons'
 function TodoItem(props) {
    
   return (
-    <li className="TodoItem">
+    <li className="TodoItem"> 
 
         <div className='TodoItem-complete_icon'>
           <CompleteIcon completed={props.completed} onComplete={props.onComplete} />
-        </div>
+        </div> 
 
         <div className='TodoItem-text'>
           <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
@@ -19,7 +19,7 @@ function TodoItem(props) {
 
         <div className='TodoItem-remove_edit'>
           <EditIcon onEdit={props.onEdit} />
-          <RemoveIcon onRemove={props.onRemove} />
+          <RemoveIcon onRemove={props.onRemove} /> 
         </div> 
 
     </li> 

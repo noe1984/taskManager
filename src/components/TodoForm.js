@@ -1,7 +1,6 @@
 import React from 'react' 
 import './styles/TodoForm.css'
-import { useTodos } from '../hooks/useTodos'
-import { useLocation, useNavigate } from 'react-router'
+import { useNavigate } from 'react-router'
 
 function TodoForm(props) {
     const [todoValue, setTodoValue] = React.useState('' || props.textToEdit)
@@ -24,6 +23,7 @@ function TodoForm(props) {
     return (
         <div className='formContainer'>
             <form onSubmit={onSubmit} className='form'>
+            <img src={props.formImage}/>
                 <label>{props.formTitle}</label>
 
                 <textarea

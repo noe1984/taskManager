@@ -7,9 +7,40 @@
 .AppUI-container {
     width: 50%;
 }
-
+.AppUI-container--title {
+    display: flex;
+    align-items: center;
+    padding-top: 62px;
+    padding-bottom: 12px;
+}
+.AppUI-container--title img {
+    width: 60px;
+    height: 60px;
+    margin-left: 26px;
+}
+.AppUI-container h1 {
+    color: #2471A3;
+}
 @media screen and (min-width: 300px) and (max-width: 913px) {
     .AppUI-container {
         width: 80%;
     } 
+}
+
+@media screen and (min-width: 300px) and (max-width: 500px) {
+    .AppUI-container--title {
+        flex-direction: column;
+        padding-top: 12px;
+    }
+    .AppUI-container--title img {
+        margin-left: unset;
+        width: 56px;
+        height: 56px;
+        padding: 0;
+    }
+    .AppUI-container--title h1 {
+        padding-top: 14px;
+        padding-bottom: 8px;
+        margin: 0;
+    }
 }
