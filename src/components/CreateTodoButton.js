@@ -17,7 +17,7 @@ function CreateTodoButton({loading}) {
         disabled={loading}
       >
         +
-    </button>
+      </button>
     </div>
   );
 }

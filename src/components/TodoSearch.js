@@ -12,7 +12,7 @@ function TodoSearch({searchValue, setSearchValue, loading}) {
     setSearchParams({search: e.target.value})
   }
   
-  return (
+  return ( 
     <div>
       <input 
         className={`TodoSearch ${loading && "TodoSearch--loading"}`}

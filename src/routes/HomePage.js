@@ -70,7 +70,7 @@ const {
                 navigate('/edit/' + todo.id, {state: {todo}}) 
               }
           />
-          )}
+          )} 
         >
           {/* {todo => (
             <TodoItem
