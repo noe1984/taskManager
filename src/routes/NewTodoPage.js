@@ -4,7 +4,7 @@ import { useTodos } from '../hooks/useTodos';
 import newTask from '../assets/newTask.jpg'
 
 function NewTodoPage() {
-    const { states, stateModifiers } = useTodos()
+    const { stateModifiers } = useTodos()
     const { addTodo } = stateModifiers
     return (
         <div>

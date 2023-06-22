@@ -63,7 +63,7 @@ function useLocalStorage(itemName, initialValue) {
       } catch (error) {
         dispatch({type: "ERROR"})
       }
-    },1000);
+    },2000);
   },[synchronizedItem])
 
   const synchronizeItem = () => { 

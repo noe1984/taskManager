@@ -17,7 +17,7 @@ function TodoForm(props) {
     }
 
     function onCancel() {
-        navigate(-1)
+        navigate('/')
     }
 
     return (

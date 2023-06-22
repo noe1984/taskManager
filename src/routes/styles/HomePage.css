@@ -3,10 +3,11 @@
     align-content: center;
     justify-content: center;
 }
+
 .AppUI-container--title {
     display: flex;
     align-items: center;
-    padding: 62px 0 12px 0;
+    padding: 62px 0 12px 0; 
 }
 .AppUI-container--title img {
     width: 58px;

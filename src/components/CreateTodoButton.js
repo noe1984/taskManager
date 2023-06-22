@@ -8,7 +8,7 @@ function CreateTodoButton({loading}) {
 
   return ( 
     <div className={`CreateTodoButton-container ${loading && 'CreateTodoButton-container--loading'}`}>
-      <h3>
+      <h3> 
         Añade una nueva tarea
       </h3>
       <button 
