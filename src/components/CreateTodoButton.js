@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/CreateTodoButton.css'; 
 import { useNavigate } from 'react-router';
+import addButton from "../assets/addButton.svg";
 
 function CreateTodoButton({loading}) { 
   const navigate = useNavigate() 
@@ -11,13 +12,14 @@ function CreateTodoButton({loading}) {
       <h3> 
         Añade una nueva tarea
       </h3>
+
       <button 
         className="CreateTodoButton" 
         onClick={() => navigate('/new')}
         disabled={loading}
       >
-        +
-      </button>
+        <img src={addButton}/>
+      </button> 
     </div>
   );
 }

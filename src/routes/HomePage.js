@@ -20,20 +20,20 @@ function HomePage() {
   const {
     loading,
     error,
-    totalTodos, 
+    totalTodos,  
     completedTodos,
     searchValue,
-    searchedTodos, 
-} = states
+    searchedTodos,
+  } = states
 
-const {
-    synchronizeTodos,
-    setSearchValue,
-    completeTodo, 
-    removeTodos,
-} = stateModifiers
+  const {
+      synchronizeTodos,
+      setSearchValue,
+      completeTodo, 
+      removeTodos,
+  } = stateModifiers
 
-  return (  
+  return (
     <div className='AppUI'>
       <div className='AppUI-container'>
         <div className='AppUI-container--title'>
@@ -53,7 +53,7 @@ const {
           loading={loading}
           error={error}
           searchText={searchValue}
-          totalTodos={totalTodos}
+          totalTodos={totalTodos} 
 
           onLoading={() => <TodosLoading/>}
           onError={() => <TodosError/>}
@@ -61,20 +61,22 @@ const {
           onEmptySearchResults={(searchText) => <p>No hay resultados para {searchText}</p> }
           onRender={todo => (
           <TodoItem
-              key={todo.id} 
-              text={todo.text}
-              completed={todo.completed}
-              onComplete={ () => completeTodo(todo.id) }
-              onRemove={ () => removeTodos(todo.id) }
-              onEdit={ () => 
-                navigate('/edit/' + todo.id, {state: {todo}}) 
-              }
+            key={todo.id} 
+            text={todo.text} 
+            completed={todo.completed}
+            onComplete={ () => completeTodo(todo.id) }
+            onRemove={() => 
+              navigate('/remove/' + todo.id, {state: {todo}})
+            }
+            onEdit={ () => 
+              navigate('/edit/' + todo.id, {state: {todo}})  
+            }
           />
-          )} 
+          )}  
         >
           {/* {todo => (
             <TodoItem
-                key={todo.text}
+                key={todo.id}
                 text={todo.text}
                 completed={todo.completed}
                 onComplete={ () => completeTodo(todo.text) }

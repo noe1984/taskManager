@@ -22,11 +22,11 @@
   width: calc(100% - 80px);
   font-weight: bold;
   word-wrap: break-word;
-  font-size: 14px;
+  font-size: 16px;
   padding-left: 8px; 
 }
 .TodoItem-p {
-  width: calc(100% - 50px); 
+  width: calc(100% - 50px);  
 }
 
 .TodoItem-p--complete {
@@ -37,5 +37,4 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-
 }

@@ -8,7 +8,7 @@ const initialState = ({initialValue}) => ({
 })
 
 
-const storageReducer = (state, action) => {
+const storageReducer = (state, action) => { 
   switch(action.type) {
     case "SUCCESS": return {
       ...state,
@@ -63,7 +63,7 @@ function useLocalStorage(itemName, initialValue) {
       } catch (error) {
         dispatch({type: "ERROR"})
       }
-    },2000);
+    },500);
   },[synchronizedItem])
 
   const synchronizeItem = () => { 

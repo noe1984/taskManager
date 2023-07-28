@@ -4,6 +4,10 @@
     justify-content: center;
 }
 
+.AppUI-container {
+    width: 640px;
+}
+
 .AppUI-container--title {
     display: flex;
     align-items: center;
@@ -15,7 +19,7 @@
     margin-left: 14px;
 }
 .AppUI-container h1 {
-    color: #2471A3;
+    color: #2471A3; 
 }
 @media screen and (min-width: 300px) and (max-width: 913px) {
     .AppUI-container {

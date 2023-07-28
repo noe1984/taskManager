@@ -1,7 +1,7 @@
 import React from 'react';
 import { TodoForm } from '../components/TodoForm';
 import { useTodos } from '../hooks/useTodos';
-import newTask from '../assets/newTask.jpg'
+import newTaskImage from '../assets/newTask.jpg'
 
 function NewTodoPage() {
     const { stateModifiers } = useTodos()
@@ -12,7 +12,7 @@ function NewTodoPage() {
                 formTitle={'Crea un nuevo todo'} 
                 submitText={'crear'} 
                 submitEvent={addTodo}
-                formImage={newTask}
+                formImage={newTaskImage}
             />
         </div>
     )

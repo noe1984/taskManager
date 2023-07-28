@@ -15,7 +15,7 @@ const iconTypes = {
     "edit": color => (
         <Edit className="Icon-svg Icon-svg--edit" fill={color} />
     )
-}
+} 
 
 function TodoIcon({type, color, onClick}) {
     return (
@@ -42,7 +42,7 @@ function RemoveIcon({onRemove}) {
         <TodoIcon 
             type={'delete'}
             color={'#A93226'}
-            onClick={onRemove}  
+            onClick={onRemove}   
         />
     )
 }
