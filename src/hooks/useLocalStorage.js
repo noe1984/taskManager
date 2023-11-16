@@ -82,7 +82,7 @@ function useLocalStorage(itemName, initialValue) {
 
   return {
     item, 
-    saveItem,
+    saveItem, 
     loading,
     error,
     synchronizeItem,

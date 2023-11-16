@@ -1,10 +1,27 @@
-import React from 'react' 
+import React, { useRef, useState } from 'react' 
 import './styles/TodoForm.css'
 import { useNavigate } from 'react-router'
+import { Blurhash } from 'react-blurhash'
+
+const useLoadImage = () => {
+    const [loading, setLoading] = useState(true)
+    const ref = useRef()
+    
+    const onLoad = () => {
+        if (ref.current && ref.current.complete) { 
+            setLoading(false)
+        }
+    }
+    
+    return { loading, ref, onLoad }
+}
+
 
 function TodoForm(props) {
-    const [todoValue, setTodoValue] = React.useState('' || props.textToEdit)
+    const { loading, ref, onLoad } = useLoadImage()
     const navigate = useNavigate()
+    const [todoValue, setTodoValue] = React.useState('' || props.textToEdit)
+
 
     function onChange(e) {
         setTodoValue(e.target.value)
@@ -15,21 +32,34 @@ function TodoForm(props) {
         props.submitEvent(todoValue)
         navigate('/')
     }
-
-    function onCancel() {
+ 
+    function onCancel() { 
         navigate('/')
     }
 
-    return (
+
+    return ( 
         <div className='formContainer'>
+            <div className='formContainer-image'>
+                {(loading &&
+                    <Blurhash 
+                        hash={props.blurhash}
+                        width='300px'
+                        height='200px'
+                        border-radius= '10%'
+                    />
+                )}
+                {<img src={props.formImage} ref={ref} onLoad={onLoad} alt='form' />}
+            </div>
+            
             <form onSubmit={onSubmit} className='form'>
-            <img src={props.formImage}/>
+                
                 <label>{props.formTitle}</label>
 
                 <textarea
                     placeholder="Escribe aqui una actividad a realizar..."
                     onChange={onChange}
-                    value={todoValue}
+                    value={todoValue} 
                 />
 
                 <div className="TodoForm-buttonContainer">
@@ -54,5 +84,6 @@ function TodoForm(props) {
         </div>
     )
 }
+
 
 export {TodoForm} 

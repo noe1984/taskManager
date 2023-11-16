@@ -17,7 +17,7 @@
     right: 2px;
   } 
 
-  .Icon-container--edit {
+  .Icon-container--edit { 
     position: absolute; 
     right: 38px;
   }
@@ -27,9 +27,9 @@
     height: 22px;
     transition: fill .15s; 
   }
-  .Icon-container:hover .Icon-svg--check {
+  /* .Icon-container:hover .Icon-svg--check {
     fill: rgb(173, 160, 160);
-  }
+  } */
   .Icon-container:hover .Icon-svg--delete {
     fill: #CD6155;
   }

@@ -42,7 +42,7 @@ function RemoveIcon({onRemove}) {
         <TodoIcon 
             type={'delete'}
             color={'#A93226'}
-            onClick={onRemove}   
+            onClick={onRemove}    
         />
     )
 }

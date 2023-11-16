@@ -44,7 +44,7 @@ function HomePage() {
         <TodoHeader loading={loading}>
           <TodoCounter completedTodos={completedTodos} totalTodos={totalTodos}/>
           <TodoSearch searchValue={searchValue} setSearchValue={setSearchValue} />
-        </TodoHeader>
+        </TodoHeader> 
 
         <CreateTodoButton loading={loading}/>
         <ChangeAlert synchronizeTodos={synchronizeTodos}  />

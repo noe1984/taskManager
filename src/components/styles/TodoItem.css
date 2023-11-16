@@ -1,6 +1,5 @@
 .TodoItem {
   background: #8360c3;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right,#8360c3,#2ebf91); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
   position: relative;   
@@ -15,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  padding-left: 8px; 
+  padding-left: 8px;  
 }
 
 .TodoItem-text {

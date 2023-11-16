@@ -16,7 +16,7 @@ function App() {
         <Route path='/remove/:id' element={<RemovePage />} />
         <Route path='*' element={<NotFound />} /> 
       </Routes> 
-    </HashRouter>
+    </HashRouter> 
   )
 }
  

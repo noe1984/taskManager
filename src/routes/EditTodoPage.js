@@ -9,6 +9,7 @@ function EditTodoPage() {
     const { states, stateModifiers } = useTodos()
     const { editTodo } = stateModifiers
     const { getTodo, loading } = states
+    const blurhash = 'LZP%w;J6%MspX8xaxaWB~D$*a|Sf'
     
     const params = useParams()
     const id = Number(params.id)
@@ -33,6 +34,7 @@ function EditTodoPage() {
             formImage={editTask}
             textToEdit={textToEdit} 
             submitEvent={(newText) => editTodo(id, newText)}
+            blurhash={blurhash}
         />
     )
 }

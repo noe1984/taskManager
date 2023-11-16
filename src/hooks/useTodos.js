@@ -90,6 +90,8 @@ function useTodos() {
         saveTodos(newTodos)
     }
 
+    
+
     // function removeTodos(text){
     //     const newTodos = todos.filter(todo=>todo.text !== text)
     //     saveTodos(newTodos)
