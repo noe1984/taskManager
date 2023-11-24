@@ -29,7 +29,7 @@ function EditTodoPage() {
     
     return (
         <TodoForm 
-            formTitle={'Edita tu todo'} 
+            formTitle={'Edita tu tarea'} 
             submitText={'editar'} 
             formImage={editTask}
             textToEdit={textToEdit} 

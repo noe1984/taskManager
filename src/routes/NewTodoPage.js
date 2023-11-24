@@ -10,7 +10,7 @@ function NewTodoPage() {
     return (
         <div>
             <TodoForm
-                formTitle={'Crea un nuevo todo'} 
+                formTitle={'Crea una nueva tarea'} 
                 submitText={'crear'} 
                 submitEvent={addTodo}
                 formImage={newTaskImage}
